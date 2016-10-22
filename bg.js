@@ -63,6 +63,7 @@ async function discardMany() {
 }
 
 async function onBrowserActionClicked() {
+  chrome.browserAction.setBadgeText({'text':'…'});
   let result = await discardMany();
   await recordResult(result);
   await showBadge();
